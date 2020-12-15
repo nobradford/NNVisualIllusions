@@ -2,6 +2,9 @@
 Final project for neural networks and machine learning
 
 ## 1. Introduction
+Humans are able to process myriad complex stimuli throughout the day with next to zero challenges, but certain stimuli seem to trick our visual systems. Visual illusions are a fascinating tactic used by researchers to push on the limitations of our visual system. With research in computer vision rising in popularity, studying the similarities and differences between human and computer vision is of increasing importance. In this project, a visual illusion was tested on a pretrained VGG16 network (Simonyan & Zisserman, 2015). 
+
+## 2. Methods
 <p>
 <img src="stim_1_39.jpeg"
      alt="stimulus example"
