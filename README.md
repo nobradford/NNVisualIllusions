@@ -46,10 +46,7 @@ The stimuli were created using PsychoPy. The number of items per stimulus image 
 <p>
 
 <p>
-<img src="teststim_28_62.jpeg"
-     alt="stimulus example"
-     height=200
-     style="float: left; margin-right: 10px;" />
+
 <img src="teststim_29_59.jpeg"
      alt="stimulus example"
      height=200
