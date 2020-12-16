@@ -11,7 +11,7 @@ The approximate number system is present in humans and many other animals to hel
      alt="stimulus example"
      height=200
      style="float: left; margin-right: 10px;" />
-<img src= Screenshot (28).png"
+<img src= "Screenshot (28).png"
      alt="stimulus example"
      height=200
      style="float: left; margin-right: 10px;" />  
