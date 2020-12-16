@@ -58,7 +58,11 @@ The stimuli were created using PsychoPy. The number of items per stimulus image 
 <img src="teststim_90_76.jpeg"
      alt="stimulus example"
      height=200
-     style="float: left; margin-right: 10px;" /> 
+     style="float: left; margin-right: 10px;" />
+<img src="teststim_28_62.jpeg"
+     alt="stimulus example"
+     height=200
+     style="float: left; margin-right: 10px;" />
 <em><br><strong>Figure 3.</strong> Examples of coherent stimuli. These were used for test set. </em>
 <p>   
 
