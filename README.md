@@ -141,6 +141,16 @@ for epoch in range(20):
 
 
 ## 3. Results
+After 20 epochs of training, the network performs very well on the training set (with variable orientations), but very poorly on the testing set (with coherent orientations) (fig 4). As shown in the figure below, the training accuracy is close to 100% after just 10 epochs. The testing accuracy on the other hand vacilates around 5% over the 20 epochs, indicating no improvement in test accuracy as a result of training.
+<p>
+<img src="results_nn.png"
+     alt="stimulus example"
+     height=200
+     style="float: left; margin-right: 10px;" /> 
+<em><br><strong>Figure 4.</strong> Preliminary results from training over 20 epochs. Orange is training and blue is testing. </em>
+<p>
+
+So far, the results are just preliminary, but they give 
 
 ## 4. Future Directions
 
