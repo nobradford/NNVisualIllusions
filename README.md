@@ -21,7 +21,8 @@ The approximate number system is present in humans and many other animals to hel
 
 ## 2. Methods
 
-**Stimuli**
+### Stimuli
+
 The stimuli were created using PsychoPy. The number of items per stimulus image ranged from 20-89. Stimuli used for training had random orientations, ranging from 0-180 (fig 2) and stimuli used for testing had coherent orientations randomly chosen from a list of 4 orientations (0, 45, 90, 135) (fig 3). The training set consisted of 3000 images and the testing set consisted of 2000 images.
 
 <p>
@@ -63,3 +64,9 @@ The stimuli were created using PsychoPy. The number of items per stimulus image 
      style="float: left; margin-right: 10px;" /> 
 <em><br><strong>Figure 3.</strong> Examples of coherent stimuli. These were used for test set. </em>
 <p>
+     
+### Network Architecture
+
+To start, I used a pretrained VGG net and interrupted it at the 31st layer. I then created a linear decoder from that layer and trained it on my training set images. Finally, I tested performance of the linear decoder on my test set images. For the first iteration of the study, I trained the network over one epoch before testing it, but accuracy was very low (around 0.0155). I decided to add 20 epochs to the training and then test performance on the test set. 
+
+
