@@ -69,4 +69,18 @@ The stimuli were created using PsychoPy. The number of items per stimulus image 
 
 To start, I used a pretrained VGG net and interrupted it at the 31st layer. I then created a linear decoder from that layer and trained it on my training set images. Finally, I tested performance of the linear decoder on my test set images. For the first iteration of the study, I trained the network over one epoch before testing it, but accuracy was very low (around 0.0155). I decided to add 20 epochs to the training and then test performance on the test set. 
 
+### Creating a Dataset
+
+
+
+## 3. Results
+
+## 4. Future Directions
+
+### Varying coherence
+One limitation of this study is that I only investigated coherence on a binary (completely coherent or randomly selected orientations). In the future, I would like to varying coherence on a spectrum as Dewind et al. did. This could improve performance of the network and make it more comparable to the human experiment.
+
+### Test set vs Train set
+In this experiment, I made the training images all randomly oriented stimuli and the test set all coherently oriented. While this can offer important insights, I believe in order to interpret these findings, we would need to compare them to performance by the network when the trainiing and testing stimuli are both coherent or variable. If the network trained on variable stimuli performs similarly when tested on variable and coherent test stimuli, then we might be able to conclude that the illusion does not work on the network. 
+
 
