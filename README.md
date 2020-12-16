@@ -150,7 +150,7 @@ After 20 epochs of training, the network performs very well on the training set 
 <em><br><strong>Figure 4.</strong> Preliminary results from training over 20 epochs. Orange is training and blue is testing. </em>
 <p>
 
-So far, the results are just preliminary, but they give 
+So far, the results are just preliminary, but they have given me insight into how difficult it is to train a network on images like these. The poor performance could be indicative of an illusive effect, but I will need to do furter evaluations to test if this is actually the case.  
 
 ## 4. Future Directions
 
@@ -159,5 +159,8 @@ One limitation of this study is that I only investigated coherence on a binary (
 
 ### Test set vs Train set
 In this experiment, I made the training images all randomly oriented stimuli and the test set all coherently oriented. While this can offer important insights, I believe in order to interpret these findings, we would need to compare them to performance by the network when the trainiing and testing stimuli are both coherent or variable. If the network trained on variable stimuli performs similarly when tested on variable and coherent test stimuli, then we might be able to conclude that the illusion does not work on the network. 
+
+### Pretrained networks
+For simplicity's sake, I used a pretrained VGG net in this project. Because the network was initially trained on ImageNet, it was difficult to train the network to do a completely different classification with very different stimuli. In light of this, I would like to try training a network on numerical stimuli in the future. For example, it could be trained to count the number of items in naturalistic images like apples in a basket or leafs on a plant. This might make the training/testing of the illusion easier and would also mimic human numerical cognition. 
 
 
