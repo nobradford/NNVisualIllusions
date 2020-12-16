@@ -166,7 +166,7 @@ For simplicity's sake, I used a pretrained VGG net in this project. Because the 
 
 ## 5. Final note
 
-Though this project was not exactly the idealic human-like neural network I had in mind when I set out on this adventure, I have learning quite a bit throughout the process. First, I learned to use PsychoPy for the first time and will continue using it for my research. Second, I learned how to make my own datasets in Python which will allow me to continue experimenting with training neural networks on my own images in the future. Third, debugging was incredibly hard and time-consuming, but I did learn a LOT while doing so (and from the people helping me debug). Without the help of my peers and professor, I probably wouldn't have been able to finish this project. Thank you to: Dr. Emre Neftci, Tim Lui, Helio Tejeda Lemus, and Graham Smith for all the help!
+Though this project was not exactly the idealic human-like neural network I had in mind when I set out on this adventure, I have learned quite a bit throughout the process. First, I learned to use PsychoPy for the first time and will continue using it for my research. Second, I learned how to make my own datasets in Python which will allow me to continue experimenting with training neural networks on my own images in the future. Third, debugging was incredibly hard and time-consuming, but I did learn a LOT while doing so (and from the people helping me debug). Without the help of my peers and professor, I probably wouldn't have been able to finish this project. Thank you to: Dr. Emre Neftci, Tim Lui, Helio Tejeda Lemus, and Graham Smith for all the help!
 
 ## 6. References
  
