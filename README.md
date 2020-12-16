@@ -9,11 +9,11 @@ The approximate number system is present in humans and many other animals to hel
 <p>
 <img src="Screenshot (96).png"
      alt="stimulus example"
-     height=170
+     height=160
      style="float: left; margin-right: 10px;" />
 <img src= "Screenshot (28).png"
      alt="stimulus example"
-     height=200
+     height=190
      style="float: left; margin-right: 10px;" />  
 <em><br><strong>Figure 1.</strong> Images from Dewind et al., 2020. (Left) Examples of the range of coherent to variable stimuli used in the comparison task. (Right) Data from comparison task. The proportion of trials in which participants chose the right (as opposed to left) stimulus at each numerical ratio sand each difference in orientation coherence. </em>
 <p>
