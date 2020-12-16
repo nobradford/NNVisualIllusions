@@ -6,6 +6,18 @@ Humans are able to process myriad complex stimuli throughout the day with next t
 
 The approximate number system is present in humans and many other animals to help us guess the number of objects in front of us when we do not have sufficient time to count them all. An illusion that works on this system is called the "coherence effect" - visually coherent groups of stimuli appear more numerous than variable groups. For example, a group of items with the same orientation will seem more numerous than a groups of the same number of items with variable orientations (Dewind et al., 2020). Using this illusion on a classifier network seemed like an interesting way to gain insight into how illusions might affect neural networks. 
 
+<p>
+<img src="Screenshot (96).png"
+     alt="stimulus example"
+     height=200
+     style="float: left; margin-right: 10px;" />
+<img src= Screenshot (28).png"
+     alt="stimulus example"
+     height=200
+     style="float: left; margin-right: 10px;" />  
+<em><br><strong>Figure 1.</strong> Images from Dewind et al., 2020. (Left) Examples of the range of coherent to variable stimuli used in the comparison task. (Right) Data from comparison task. The proportion of trials in which participants chose the right (as opposed to left) stimulus at each numerical ratio sand each difference in orientation coherence. </em>
+<p>
+
 
 ## 2. Methods
 <p>
