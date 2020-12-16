@@ -163,4 +163,14 @@ In this experiment, I made the training images all randomly oriented stimuli and
 ### Pretrained networks
 For simplicity's sake, I used a pretrained VGG net in this project. Because the network was initially trained on ImageNet, it was difficult to train the network to do a completely different classification with very different stimuli. In light of this, I would like to try training a network on numerical stimuli in the future. For example, it could be trained to count the number of items in naturalistic images like apples in a basket or leafs on a plant. This might make the training/testing of the illusion easier and would also mimic human numerical cognition. 
 
+## 5. Final note
 
+Though this project was not exactly the idealic human-like neural network I had in mind when I set out on this adventure, I have learning quite a bit throughout the process. First, I learned to use PsychoPy for the first time and will continue using it for my research. Second, I learned how to make my own datasets in Python which will allow me to continue experimenting with training neural networks on my own images in the future. Third, debugging was incredibly hard and time-consuming, but I did learn a LOT while doing so (and from the people helping me debug). Without the help of my peers and professor, I probably wouldn't have been able to finish this project. Thank you to: Dr. Emre Neftci, Tim Lui, Helio Tejeda Lemus, and Graham Smith for all the help!
+
+## 6. References
+ 
+Gomez-Villa, A., Martín, A., Vazquez-Corral, J., & Bertalmío, M. (2018). Convolutional Neural Networks Deceived by Visual Illusions. ArXiv:1811.10565 [Cs]. http://arxiv.org/abs/1811.10565
+
+Simonyan, K., & Zisserman, A. (2015). Very Deep Convolutional Networks for Large-Scale Image Recognition. ArXiv:1409.1556 [Cs]. http://arxiv.org/abs/1409.1556
+
+DeWind, N. K., Bonner, M. F., & Brannon, E. M. (2020). Similarly oriented objects appear more numerous. Journal of Vision, 20(4), 4–4. https://doi.org/10.1167/jov.20.4.4
