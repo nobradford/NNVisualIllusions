@@ -63,14 +63,81 @@ The stimuli were created using PsychoPy. The number of items per stimulus image 
      height=200
      style="float: left; margin-right: 10px;" /> 
 <em><br><strong>Figure 3.</strong> Examples of coherent stimuli. These were used for test set. </em>
-<p>
-     
-### Network Architecture
-
-To start, I used a pretrained VGG net and interrupted it at the 31st layer. I then created a linear decoder from that layer and trained it on my training set images. Finally, I tested performance of the linear decoder on my test set images. For the first iteration of the study, I trained the network over one epoch before testing it, but accuracy was very low (around 0.0155). I decided to add 20 epochs to the training and then test performance on the test set. 
+<p>   
 
 ### Creating a Dataset
 
+After creating the stimuli, I had to add them into the network by creating a Dataset. The outputs of my dataset were "images" (stimulus images themselves), "number_objects" (the actual number of items in the image, with a range of 20-89), and "label" (the number of objects minus 20, creating a range of 0-70).
+```
+class test_orientations(Dataset):
+  def __init__(self, csv_file, root_dir, transform=None):
+        """
+        Args:
+            csv_file (string): Path to the csv file with annotations.
+            root_dir (string): Directory with all the images.
+            transform (callable, optional): Optional transform to be applied
+                on a sample.
+        """
+        self.test_ori_frame = pd.read_csv(csv_file)
+        self.root_dir = root_dir
+        self.transform = transform
+        
+  def __len__(self):
+    return len(self.test_ori_frame)
+    
+  def __getitem__(self, idx):
+    if torch.is_tensor(idx):
+      idx = idx.tolist()
+
+    img_name = os.path.join(self.root_dir,
+                                self.test_ori_frame.iloc[idx, 0])
+    image = io.imread(img_name)
+    number_objects = self.test_ori_frame.iloc[idx, 1]
+    number_objects = np.array([number_objects])
+    number_objects = number_objects.astype('float')#.reshape(-1, 2)
+    label = self.test_ori_frame.iloc[idx, 2]
+    label = np.array([label])
+    label = label.astype('int').squeeze()
+    sample = {'image': image,'number_objects': number_objects, 'label':label}
+
+    if self.transform:
+      image = self.transform(image) 
+    sample = {'image': image, 'number_objects': number_objects,'label':label} 
+    return image, number_objects, label
+```
+
+### Network Architecture
+
+To start, I used a pretrained VGG net and interrupted it at the 31st layer. I then created a linear decoder from that layer and trained it on my training set images. Finally, I tested performance of the linear decoder on my test set images. For the first iteration of the study, I trained the network over one epoch before testing it, but accuracy was very low (around 0.0155). I decided to add 20 epochs to the training and then test performance on the test set. Below is the training and testing loop along with the calculation of accuracy. 
+
+```
+acc_batch = []
+acc_hist_train = []
+acc_hist_test = []
+
+for epoch in range(20):
+  lin.train()
+  torch.cuda.empty_cache()
+  for data, num_objects, target in tqdm.tqdm(iter(train_loader)):   
+    loss_ = train_step(data, target, lin, opt, crossentloss)    
+  acc_batch = []
+  for data, num_objects, target in tqdm.tqdm(iter(train_loader)):
+    output=model(data.cuda())
+    flattenedoutput = torch.flatten(output.detach(),1)
+    y = lin(flattenedoutput)
+    acc_batch.append(torch.mean((target.cuda() == y.argmax(1)).float()))
+  acc_hist_train.append(torch.mean(torch.FloatTensor(acc_batch)))  
+
+  acc_batch = []
+  lin.eval()
+  for data, num_objects, target in tqdm.tqdm(iter(test_loader)):
+    output=model(data.cuda())
+    flattenedoutput = torch.flatten(output.detach(),1)
+    y = lin(flattenedoutput)
+    acc_batch.append(torch.mean((target.cuda() == y.argmax(1)).float()))
+  acc_hist_test.append(torch.mean(torch.FloatTensor(acc_batch)))
+  print('Accuracy:', torch.mean(torch.FloatTensor(acc_batch)))
+```
 
 
 ## 3. Results
