@@ -9,7 +9,7 @@ The approximate number system is present in humans and many other animals to hel
 <p>
 <img src="Screenshot (96).png"
      alt="stimulus example"
-     height=200
+     height=170
      style="float: left; margin-right: 10px;" />
 <img src= "Screenshot (28).png"
      alt="stimulus example"
@@ -20,6 +20,10 @@ The approximate number system is present in humans and many other animals to hel
 
 
 ## 2. Methods
+
+**Stimuli**
+The stimuli were created using PsychoPy. The number of items per stimulus image ranged from 20-89. Stimuli used for training had random orientations, ranging from 0-180 (fig 2) and stimuli used for testing had coherent orientations randomly chosen from a list of 4 orientations (0, 45, 90, 135) (fig 3). The training set consisted of 3000 images and the testing set consisted of 2000 images.
+
 <p>
 <img src="stim_1_39.jpeg"
      alt="stimulus example"
@@ -37,7 +41,7 @@ The approximate number system is present in humans and many other animals to hel
      alt="stimulus example"
      height=200
      style="float: left; margin-right: 10px;" /> 
-<em><br><strong>Figure 1.</strong> Examples of variable stimuli. These were used for training set. </em>
+<em><br><strong>Figure 2.</strong> Examples of variable stimuli. These were used for training set. </em>
 <p>
 
 <p>
@@ -57,5 +61,5 @@ The approximate number system is present in humans and many other animals to hel
      alt="stimulus example"
      height=200
      style="float: left; margin-right: 10px;" /> 
-<em><br><strong>Figure 2.</strong> Examples of coherent stimuli. These were used for test set. </em>
+<em><br><strong>Figure 3.</strong> Examples of coherent stimuli. These were used for test set. </em>
 <p>
